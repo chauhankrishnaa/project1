@@ -1,2 +1,8 @@
 Adding testing file
 reverting test file for fork example
+stage('Push Changes to Target Repository') {
+            steps {
+                // Add steps to merge changes if necessary before pushing
+                git branch: 'main', credentialsId: 'target-repo-token', url: TARGET_REPO_URL, push: true
+            }
+        }
